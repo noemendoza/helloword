@@ -1,0 +1,14 @@
+
+version: "3.3"
+
+services:
+  api:
+    restart: "always"
+    build: .
+    ports:
+      - "8000:8000"
+    networks:
+      - express
+networks:
+  express:
+    external: true
